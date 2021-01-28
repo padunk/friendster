@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :admins, path: 'admins', controllers: { sessions: 'admin/sessions'}
+  devise_for :users, path: ''
   # get 'home/index'
   get 'home/about'
   root 'home#index'
